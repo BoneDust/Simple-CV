@@ -1,0 +1,12 @@
+@import 'src/assets/global-stylesheets/colors.scss';
+
+.main-panel{
+  height: 100%;
+  word-wrap: break-word;
+  background: $white;
+
+  h1{
+    margin-top: unset;
+    margin-left: 20%;
+  }
+}

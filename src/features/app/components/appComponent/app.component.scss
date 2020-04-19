@@ -1,3 +1,15 @@
+@import 'src/assets/global-stylesheets/colors.scss';
+
 .app-root{
     display: inline-flex;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    .side-panel{
+      width: 30%;
+    }
+    .main-panel{
+      width:70%;
+    }
 }

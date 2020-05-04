@@ -4,9 +4,70 @@
   height: 100%;
   word-wrap: break-word;
   background: $white;
-
-  h1{
-    margin-top: unset;
-    margin-left: 20%;
+  padding-left: 50px;
+  font-family: Arial;
+  
+  .details{
+    .name {
+       padding-top: 40px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .job-title {
+      font-size: 25px;
+      color: $black;
+    }
+    .work-area {
+      font-size: 18px;
+      color: $body-gray;
+    }
+  }
+  .new-section{
+    width: 95%;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    color: $black;
+    border-bottom:  1px solid $body-gray;
+  }
+  .summary-content{
+    width: 95%;
+    padding-top: 40px;
+    color: $body-gray;
+    .summary-item-header{
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  .experience-content{
+    width: 95%;
+    padding-top: 40px;
+    color: $body-gray;
+    .experience-title{
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .experience-subtext{
+      font-weight: bold;
+      font-size: 16px;
+      color: $black;
+    }
+  }
+  .education-content{
+    width: 95%;
+    padding-top: 40px;
+    color: $body-gray;
+    .education-institute{
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .education-course{
+      font-weight: bold;
+      font-size: 18px;
+      color: $black;
+    }
+  }
+  .space-div{
+    margin-bottom: 60px;
   }
 }

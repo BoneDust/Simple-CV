@@ -1,7 +1,8 @@
 @import 'src/assets/global-stylesheets/colors.scss';
 
 .app-root{
-    display: inline-flex;
+    display: flex;
+    flex-flow: row;
     width: 75%;
     margin-left: 12.5%;
     margin-top: 50px;

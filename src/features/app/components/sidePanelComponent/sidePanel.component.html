@@ -1,110 +1,47 @@
 <div class="side-panel">
     <br>
-
-    <div class="image">
-        <img [src]="'assets/images/headshot.jpeg'" >
+    <div class="image-div">
+        <img class="image" [src]="'assets/images/headshot.jpeg'" >
     </div>
-    <div>
-      <p>
-        this is just some dfjsdhbisdfbdsfhjodhf
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-      </p>
-      <p>
-        this is just some dfjsdhbisdgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu t
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfbdsfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdb
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbt
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
-      <p>
-        this is just some dfhjodhfgojds bgfhods
-        fdsfasgfh fdtgvsdfbvdab  bdsvgdbdby vsdbtryu
-        trcrwt4t rtetretwftb
-      </p>
 
+    <div class="info-block">
+      <div class="heading">Personal Info</div>
+      <div class="contact-details" *ngFor="let contact of contactDetails">
+        <img class="contact-icon" [src]="contact.imageUrl">
+        <div>{{contact.text}}</div>
+        <a href="mailto:gktshekela@gmail.com?subject=Job Opportunity" target="_blank">
+          {{contact.email}}
+        </a>
+      </div>
+      <div class="media-links">
+        <div *ngFor="let link of links">
+          <a [href]="link.url" target="_blank">
+            <img [src]="link.image" class="link-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <div class="heading">Tech Stack & Skills</div>
+      <ul>
+        <div *ngFor="let skill of skills">
+          <li>
+              {{skill.skillHeading}}
+          </li>
+          <div class="skillText">{{getString(skill.skills)}}</div>
+        </div>
+      </ul>
+
+    </div>
+
+    <div class="skill-block">
+        <div class="heading">Certifications</div>
+        <ul>
+            <li *ngFor="let certificate of certificates">
+                {{certificate}}
+            </li>
+        </ul>
     </div>
 
 </div>
